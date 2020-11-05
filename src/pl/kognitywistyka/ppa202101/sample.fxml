@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.kognitywistyka.ppa202101.backend.Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#delete" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+    </left>
+    <center>
+        <TitledPane animated="false" text="untitled" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" />
+                        <ScrollBar layoutX="7.0" onDragDetected="#scroll" orientation="VERTICAL" prefHeight="181.0" prefWidth="14.0" />
+                        <Button layoutX="199.0" layoutY="24.0" mnemonicParsing="false" onAction="#clear" prefHeight="59.0" prefWidth="96.0" text="clear" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+    </center>
+    <right>
+        <TitledPane animated="false" text="untitled" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+    </right>
+    <bottom>
+        <CheckBox fx:id="checkBox" mnemonicParsing="false" onAction="#click" prefHeight="56.0" prefWidth="267.0" text="I agree" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
